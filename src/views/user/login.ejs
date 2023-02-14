@@ -1,0 +1,259 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-deep_purple.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link href="fonts/fontello/css/fontello.css" rel="stylesheet" />
+    <link rel="icon" type="img/png" href="img/logo-01.png"/>
+    <link rel="stylesheet" href="css/bootstrap-offset-right.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Alquila | Ruedas</title>
+    <style>
+        .mdl-textfield__label {
+            margin-bottom: 0;
+            color: #d7dbdc;
+            font-weight: normal;
+        }
+        
+        .mdl-textfield--floating-label.is-focused .mdl-textfield__label,
+        .mdl-textfield--floating-label.is-dirty .mdl-textfield__label {
+            text-transform: uppercase
+        }
+        
+        .has-feedback label~.form-control-feedback {
+            top: 15px;
+        }
+        
+        .mdl-textfield {
+            width: 100%;
+        }
+        
+        .mdl-checkbox__label {
+            cursor: text;
+            font-size: 13px;
+            float: left;
+            color: #b0b3b4;
+            font-weight: normal;
+        }
+        
+        .mdl-checkbox__box-outline {
+            border: 1px solid #b0b3b4;
+        }
+        
+        .mdl-textfield__input {
+            border: none;
+            border-bottom: 1px solid rgba(0, 0, 0, .12);
+            display: block;
+            font-size: 16px;
+            margin: 0;
+            padding: 4px 0;
+            width: 100%;
+            background: 0 0;
+            text-align: left;
+            color: inherit;
+            font-weight: bold;
+        }
+        
+        .mdl-switch__label {
+            float: left;
+            font-weight: normal;
+            color: #b0b3b4;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="center-block">
+            <div class="col-lg-4 col-lg-offset-1 col-md-4 col-md-offset-1 col-sm-12 col-xs-12 no-padding" style="z-index:1">
+                <!-- Slider -->
+
+                <div class="mlt-carousel">
+                    <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img class="img-responsive center-block" src="images/step1.png" alt="step1">
+                                <div class="item-content">
+                                    <h3>Tiempo y disponibilidad</h3>
+                                    <p> En bicicleta puedes evitar largos trancones, además, </p>
+                                    <p> no tiene restricciones de horario como el pico y placa </p>
+                                    <p> de los carros particulares. </p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img class="img-responsive center-block" src="images/step2.png" alt="step2">
+                                <div class="item-content">
+                                    <h3>Medio Ambiente</h3>
+                                    <p> La bicicleta es un medio de transporte ecológico. </p>
+                                    <p> El movimiento se hace a través de los pedales y </p>
+                                    <p> estos no emiten combustibles dañinos. </p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img class="img-responsive center-block" src="images/step3.png" alt="step3">
+                                <div class="item-content">
+                                    <h3> Salud física </h3>
+                                    <p> Cuando se pedalea por lo menos 30 minutos al día </p>
+                                    <p> es posible quemar 300 calorías, se optimiza el </p>
+                                    <p> funcionamiento del sistema respiratorio. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                    </div>
+                    <!--mlt-carousel-->
+                </div>
+                <!-- Slider -->
+            </div>
+            <!-- Login -->
+
+            <div class="col-lg-6 col-lg-offset-right-1 col-md-6 col-md-offset-right-1 col-sm-12 col-xs-12 no-padding">
+                <div class="mlt-content">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#register" data-toggle="tab">REGISTRO</a></li>
+                        <li><a href="#login" data-toggle="tab">ACCESO</a></li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade in active" id="register">
+                            <!--register form-->
+                            <div class="formulario__grupo-input">
+                            <form  action="/user/signup" method="post" class="formulario" id="formulario">
+
+                                    <!--Grupo: Nombre-->
+                                    <div class="formulario__grupo" id="grupo__nombre">
+                                        <div class="formulario__grupo-input">
+                                            <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Nombre">
+                                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                        </div>
+                                        <p class="formulario__input-error">Este campo solo puede contener letras</p>
+                                    </div>
+                                    <br>
+
+                                    <!--Grupo: Tido Documento-->
+                                    <div class="formulario__grupo">
+                                        <div class="formulario__grupo-input">
+                                            <select class="formulario__input" name="tipoDoc" id="tipoDoc">
+                                                <option class="formulario__input">Tipo de documento</option>
+                                                <option class="formulario__input" value="Tarjeta de identidad">TI</option>
+                                                <option class="formulario__input" value="Cedula">CC</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <!--Grupo: Número de Documento-->
+                                    <div class="formulario__grupo" id="grupo__numeroDoc">
+                                        <div class="formulario__grupo-input">
+                                            <input type="text" class="formulario__input" name="numeroDoc" id="numeroDoc" placeholder="Número de identificación">
+                                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                        </div>
+                                        <p class="formulario__input-error">Solo puede contener números, máximo 10 dígitos</p>
+                                    </div>
+                                    <br>
+
+                                    <!-- Grupo: Teléfono -->
+									<div class="formulario__grupo" id="grupo__numeroMovil">
+										<div class="formulario__grupo-input">
+											<input type="text" class="formulario__input" name="numeroMovil" id="numeroMovil" placeholder="Teléfono">
+											<i class="formulario__validacion-estado fas fa-times-circle"></i>
+										</div>
+										<p class="formulario__input-error">Solo puede contener números, maximo son 10 dígitos</p>
+									</div>
+                                    <br>
+
+                                    <!-- Grupo: Dirección -->
+									<div class="formulario__grupo-input">
+										<input type="text" class="formulario__input" name="direccion" id="direccion" placeholder="Dirección">
+										<i class="formulario__validacion-estado fas fa-times-circle"></i>
+									</div>
+                                    <br>
+
+                                    <!-- Grupo: Correo Eléctronico -->
+                                    <div class="formulario__grupo" id="grupo__correoRegistro">
+                                        <div class="formulario__grupo-input">
+                                            <input type="email" class="formulario__input" name="username" id="username" placeholder="correo Eléctronico">
+                                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                            </div>
+                                            <p class="formulario__input-error">Este campo debe tener un @ seguido de un .com</p>
+                                    </div>
+                                    <br>
+
+                                    <!-- Grupo: Password-->
+                                    <div class="formulario__grupo" id="grupo__passwordRegistro">
+										<div class="formulario__grupo-input">
+											<input  class="formulario__input" name="password" id="password" type="password" placeholder="Contraseña">
+											<i class="formulario__validacion-estado fas fa-times-circle"></i>
+										</div>
+										<p class="formulario__input-error">Este campo debe contener de 6 8 dígitos</p>
+									</div>
+                                    <br>
+
+                                <div class="button"><input class="btn lt-register-btn" type="submit" value="Registrate Ahora"></div>
+                            </form>
+                        </div>
+                            <!--register form-->
+                        </div>
+                        <div class="tab-pane fade" id="login">
+                            <!--login form-->
+                            <form action="/user/signin" method="POST" class="formulario" id="formulario">
+
+                                <!-- Grupo: Correo Eléctronico -->
+                                    <div class="formulario__grupo" id="grupo__correoAcceso">
+                                        <div class="formulario__grupo-input">
+                                            <input type="email" class="formulario__input" name="username" id="username" placeholder="Correo Eléctronico">
+                                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                            </div>
+                                            <p class="formulario__input-error">Este campo debe tener un @ seguido de un .com</p>
+                                    </div>
+                                    <br>
+
+                                    <!-- Grupo: Password-->
+                                    <div class="formulario__grupo" id="grupo__passwordAcceso">
+										<div class="formulario__grupo-input">
+											<input  class="formulario__input" name="password" id="password" type="password" placeholder="Contraseña">
+											<i class="formulario__validacion-estado fas fa-times-circle"></i>
+										</div>
+									</div>
+                                    <br>
+                                    
+
+                                    <span class="mdl-checkbox__label ">Si has olvidado tu contraseña, recuperala aquí <a href="# ">Restablecer contraseña</a></span>
+
+                                <div class="col-lg-10 col-lg-offset-1 col-lg-offset-right-1 col-md-10 col-md-offset-1 col-md-offset-right-1 col-sm-12 col-xs-12 pull-right ">
+                                    <div class="button"><input class="btn lt-register-btn" type="submit" value="Iniciar Sesión"></div>
+                                </div>
+                            </form>
+                            <!--login form-->
+                        </div>
+                    </div>
+                </div>
+                <!--Login-->
+            </div>
+            <!--center-block-->
+        </div>
+        <!--container-->
+    </div>
+
+
+
+    <script src="node_modules/jquery/dist/jquery.min.js "></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js "></script>
+    <script src="libs/mdl/material.min.js "></script>
+    <script src="js/formulario.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js "></script>
+
+</body>
+
+</html>
